@@ -41,4 +41,16 @@ public void setUp(){
         assertFalse(gallery.getStock().contains(artwork));
     }
 
+    @Test
+    public void canGetStockTake(){
+    Artwork artwork2 = new Artwork("test",new Artist("tester"),50 );
+
+    gallery.addArtwork(artwork2);
+    int actual = gallery.getStockTake();
+
+    int expected = artwork.getPrice()+artwork2.getPrice();
+    assertThat(actual).isEqualTo(expected);
+    
+    }
+
 }

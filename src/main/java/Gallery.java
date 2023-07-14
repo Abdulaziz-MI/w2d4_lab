@@ -33,4 +33,13 @@ public class Gallery {
     public List<Artwork> getStock() {
         return this.stock;
     }
-}
+
+    public int getStockTake() {
+        int stockTake = 0;
+        for (int i = 0; i < stock.size(); i++) {
+            stockTake += stock.get(i).getPrice();
+        }
+        return stockTake;
+    }
+
+    }
