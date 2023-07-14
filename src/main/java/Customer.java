@@ -29,9 +29,8 @@ public class Customer {
             wallet -= artwork.getPrice();
             gallery.sellArtwork(artwork);
             this.artCollection.add(artwork);
-  return msg = "SOLD";
-        } else {
-         return    msg= "Insufficient funds";
-        }
+            return msg = "SOLD";}
+        else {
+            return    msg= "Insufficient funds";}
     }
 }
