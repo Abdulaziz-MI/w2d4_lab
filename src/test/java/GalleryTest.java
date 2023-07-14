@@ -50,7 +50,7 @@ public void setUp(){
 
     int expected = artwork.getPrice()+artwork2.getPrice();
     assertThat(actual).isEqualTo(expected);
-    
+
     }
 
 }

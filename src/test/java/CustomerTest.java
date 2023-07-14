@@ -40,9 +40,20 @@ public class CustomerTest {
     public void CannotAffordArtworkTwo(){
         Artwork artwork2 = new Artwork("The Blind Man", new Artist("Carl"), 1000);
         gallery.addArtwork(artwork2);
+
+        customer.purchaseArt(gallery,artwork);
+
+        assertThat(customer.purchaseArt(gallery,artwork)).isEqualTo("SOLD");
+
+        assertThat(customer.getArtCollection().contains(artwork)).isEqualTo(true);
+
+
+
         customer.purchaseArt(gallery,artwork2);
 
        assertThat(customer.purchaseArt(gallery,artwork2)).isEqualTo("Insufficient funds");
+
+       assertThat(customer.getArtCollection().contains(artwork2)).isEqualTo(false);
     }
 
 

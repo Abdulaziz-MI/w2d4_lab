@@ -19,6 +19,10 @@ public class Customer {
         return wallet;
     }
 
+    public ArrayList<Artwork> getArtCollection() {
+        return artCollection;
+    }
+
     public String purchaseArt(Gallery gallery, Artwork artwork) {
         String msg= "";
         if (wallet >= artwork.getPrice()) {
